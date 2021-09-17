@@ -1,5 +1,7 @@
+version: '3.7'
+
 services:
-    gemms_gmml:
+    gemsgmml:
         build: .
         stdin_open: true       # docker run -i
         tty: true              # docker run -t
