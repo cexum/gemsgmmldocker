@@ -1,0 +1,9 @@
+services:
+    gemms_gmml:
+        build: .
+        stdin_open: true       # docker run -i
+        tty: true              # docker run -t
+        working_dir: /home/gemsuser     # -w /gems
+        volumes:
+            - ./:/home/gemsuser         # -v "$(pwd):/gems"
+        image: cexum/gemsgmml
