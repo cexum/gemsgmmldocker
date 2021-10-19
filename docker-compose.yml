@@ -1,11 +1,18 @@
 version: '3.7'
 
-services:
-    gemsgmml:
-        build: .
-        stdin_open: true       # docker run -i
-        tty: true              # docker run -t
-        working_dir: /home/gemsuser     # -w /gems
-        volumes:
-            - ./:/home/gemsuser         # -v "$(pwd):/gems"
-        image: cexum/gemsgmml
+services: 
+  gemsgmml: 
+    build:
+      context: . 
+      dockerfile: Dockerfile
+      args:
+        USER_ID: ${USER_UID}
+        GROUP_ID: ${USER_GID}
+    stdin_open: true       # docker run -i
+    tty: true              # docker run -t
+    user: webdev
+    working_dir: /home/webdev     # -w /gems
+    volumes:
+      - ./:/home/webdev         # -v "$(pwd):/gems"
+    command: [ "/bin/bash" ]
+        

@@ -1,0 +1,5 @@
+grpcio
+grpcio-tools
+pydantic==1.8.1
+jsonpickle
+jsonschema
