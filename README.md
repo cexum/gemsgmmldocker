@@ -3,13 +3,13 @@
 
 ### Getting started
 * **this guide assumes that the host has docker and docker-compose installed**
-* build and start your container by running: docker-compose up -d 
+* build and start your container by running: bash startcontainer.bash
 * run docker ps -a to get the name of the new container
 * run docker attach <container> to get access to the container's shell
 
 ### Test your installation
 * attach to your container and run the following:
-* cd /programs/gems 
+* cd $GEMSHOME
 * bash test_installation.bash
 * cd ~
 * python3 simple.py 1ubq.pdb
@@ -22,7 +22,7 @@
 ### System information
 * GEMSHOME: /programs/gems
 * PYTHON_HOME: /usr/include/python3.7m
-* USER: gemsuser
+* USER: webdev
 
 ### GEMS documentation
 * http://glycam.org/docs/gems/writing-your-own-gems/
