@@ -25,10 +25,10 @@ to list your containers.
 3) Run docker attach <containername> to get access the container's shell.
 
 4) Once attached, run the following inside the container:
-    cd $GEMSHOME
-    bash test_installation.bash
-    cd ~
-    python3 simple.py 1ubq.pdb
+    # cd $GEMSHOME
+    # bash test_installation.bash
+    # cd ~
+    # python3 simple.py 1ubq.pdb
 
 ### How information is shared between the host and the container
 The container shares a binding mount with the host at the gemsgmmldocker directory, and the directory /home/webdev inside the container.
@@ -37,11 +37,11 @@ New gems scripts need to be saved to this directory (gemsgmmldocker,) $(pwd), in
 
 ### Starting your container
 From the gemsgmmldocker directory, run:
-    bash startcontainer.bash
+    # bash startcontainer.bash
     
 ### Stop your container
 1) Get the name of your container via: 
-    docker container ls -a
+    # docker container ls -a
 2) Run:
     docker stop <containername>
 
