@@ -17,12 +17,14 @@ build and start your container by running:
 
 #### Test your container
 1) Run:
-    docker container ls -a
+    * docker container ls -a
 to list your containers.
 
 2) locate your container which will have a name: gemsgmmldocker_gemsgmml_n.
 
-3) Run docker attach <containername> to get access the container's shell.
+3) Run:
+    * docker attach containername
+to get access the container's shell.
 
 4) Once attached, run the following inside the container:
     * cd $GEMSHOME
@@ -43,7 +45,7 @@ From the gemsgmmldocker directory, run:
 1) Get the name of your container via: 
     * docker container ls -a
 2) Run:
-    docker stop <containername>
+    * docker stop <containername>
 
 ### New GEMS scripts
 New GEMS scripts should be added to the gemsgmmldocker directory in the host in order to be shared with the container. Files present in gemsgmmldocker will visible inside the
@@ -53,7 +55,7 @@ container at: /home/webdev
 1) Attach to the container
 
 2) GEMS scripts are invoked via:
-    python3 <gemsscript>.py <arg1> ...
+    * python3 <gemsscript>.py <arg1> ...
 
 ### Container information
 * GEMSHOME: /programs/gems
